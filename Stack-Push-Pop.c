@@ -21,7 +21,8 @@ void main(){
 	//Allocating memory for the stack and storing its address in pointer s.
 	s=(stk*)malloc(sizeof(stk));
 	//Stack start from 0th position and ends at 4th position in this program.
-	//Declaring top of stack(tos) to be -1. Top of stack can't be 0 in the beginning or if stack is empty, because top of stack is the latest top position which holds data, since 0th position holds no data right now so tos=-1.
+	/*Declaring top of stack(tos) to be -1. Top of stack can't be 0 in the beginning or if stack is empty, 
+	because top of stack is the latest top position which holds latest data, since 0th position holds no data right now so tos=-1 */
 	s->tos=-1;
 	printf("Welcome to Stack Operations\n");
 	printf("1. Push\n2. Pop\n3. Display Stack\n4. Exit\n---------------------------\n");
@@ -63,7 +64,8 @@ void push(stk *a, int x){
 }
 //Defining pop function, does pop operation on the stack pointed by a.
 void pop(stk *a){
-	//Checking if stack is empty, if stack is not empty then display the data on top of stack and decrement tos variable by 1, otherwise do nothing.
+	/*Checking if stack is empty, if stack is not empty then display the data on top of stack and decrement tos variable by 1, 
+	otherwise do nothing.*/
 	if(a->tos == -1){
 		printf("Cannot Pop Empty Stack!\n");
 	}else{
